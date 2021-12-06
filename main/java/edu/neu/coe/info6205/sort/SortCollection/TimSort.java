@@ -1,0 +1,21 @@
+package edu.neu.coe.info6205.sort.chinese;
+
+import com.ibm.icu.text.Collator;
+
+import java.util.Arrays;
+import java.util.Locale;
+
+public class TimSort {
+
+    public static String[] sort(String[] xs) {
+        Collator collator = Collator.getInstance(Locale.CHINA);
+        String[] copy = preProcess(xs);
+        Arrays.sort(copy, collator::compare);
+        return copy;
+    }
+
+    public static String[] preProcess(String[] xs) {
+        return Arrays.copyOf(xs, xs.length);
+    }
+
+}
