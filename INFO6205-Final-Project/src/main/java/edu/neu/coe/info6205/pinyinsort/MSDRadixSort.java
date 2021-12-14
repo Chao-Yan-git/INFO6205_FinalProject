@@ -12,7 +12,7 @@ import java.util.Locale;
 public class MSDRadixSort {
 
     /**
-     * Sort an array of Strings using MSDChineseSort.
+     * Sort an array of Strings using MSDRadixSort.
      *
      * @param a the array to be sorted.
      */
